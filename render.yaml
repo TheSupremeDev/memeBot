@@ -1,0 +1,10 @@
+services:
+  - type: worker # Use 'worker' because it's a background task, not a website
+    name: meme-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PUPPETEER_EXECUTABLE_PATH
+        value: /usr/bin/google-chrome-stable
