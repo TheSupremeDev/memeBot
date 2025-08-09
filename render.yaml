@@ -1,5 +1,5 @@
 services:
-  - type: worker # Use 'worker' because it's a background task, not a website
+  - type: web # Use 'worker' because it's a background task, not a website
     name: meme-bot
     env: node
     plan: free
